@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TQ</string>
+    <string name="welcome_text">Welcome Back</string>
+    <string name="button_textInvite">Invite Friends</string>
+    <string name="Name_text">Desmond N.</string>
+    <string name="text_transition">It\'s much easier to win with friends</string>
+</resources>
