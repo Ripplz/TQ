@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="card_elevation">5dp</dimen>
-    <dimen name="card_contentPadding">16dp</dimen>
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="corner_Radius">10dp</dimen>
+    <dimen name="contentPadding">8dp</dimen>
     <dimen name="card_cornerRadius">12dp</dimen>
     <dimen name="card_layoutWidth">350dp</dimen>
     <dimen name="card_layoutHeight">300dp</dimen>
+    <dimen name="android_LayoutPadding">16dp</dimen>
+    <dimen name="margin_toTheRight">155dp</dimen>
 </resources>

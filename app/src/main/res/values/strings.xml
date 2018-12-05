@@ -4,4 +4,6 @@
     <string name="button_textInvite">Invite Friends</string>
     <string name="Name_text">Desmond N.</string>
     <string name="text_transition">It\'s much easier to win with friends</string>
+    <string name="cont_Desc">Help Button</string>
+    <string name="logo_desc">The TQ logo</string>
 </resources>
