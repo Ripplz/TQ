@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgcolor"
+    android:background="@color/deepSkyeBlue"
     android:orientation="vertical"
-    android:padding="@dimen/android_LayoutPadding"
+    android:paddingLeft="@dimen/android_LayoutPadding"
+    android:paddingRight="@dimen/android_LayoutPadding"
+    android:paddingBottom="@dimen/android_LayoutPadding"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/detail_backdrop_height"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        android:fitsSystemWindows="true">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <ImageView
             android:id="@+id/logo"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/logo"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="@dimen/margin_toTheRight"
+            android:layout_marginEnd="165dp"
             android:layout_marginRight="@dimen/margin_toTheRight"
             android:contentDescription="@string/logo_desc"/>
 
         <Button
             android:id="@+id/btn_invite"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/layout_height"
             android:text="@string/button_textInvite"
             android:background="@drawable/btn_rounded"
+            android:layout_marginEnd="@dimen/rightOrend"
+            android:layout_marginRight="@dimen/rightOrend"
             android:textAllCaps="false"
             android:onClick="Invite"
             android:textColor="@color/blue"
@@ -39,65 +42,156 @@
 
         <ImageView
             android:id="@+id/help_btn"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_action_help2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:clickable="true"
             android:scaleType="centerCrop"
-            android:layout_marginEnd="@dimen/margin_toTheRight"
-            android:layout_marginRight="@dimen/margin_toTheRight"
             android:contentDescription="@string/cont_Desc"
+            android:focusable="true"
+            android:src="@drawable/ic_action_help"
             android:onClick="Help"/>
     </android.support.design.widget.AppBarLayout>
 
+    <TextView
+        android:id="@+id/Toptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/transition_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_size"
+        android:textStyle="normal"/>
+
+
+
     <ScrollView
+        android:id="@+id/centerScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <android.support.v7.widget.CardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="@dimen/card_cornerRadius"
-                app:cardBackgroundColor="@color/white">
 
-                <TextView
-                    android:id="@+id/welcome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <TextView
-                    android:id="@+id/smalltalk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-            </android.support.v7.widget.CardView>
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/button_textInvite"
-                android:background="@drawable/getmorelives_btn"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:onClick="moreLives"/>
-        </FrameLayout>
-
-        <android.support.v7.widget.CardView
+        <LinearLayout
+            android:id="@+id/ChildLinear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="@dimen/card_cornerRadius"
-            app:cardBackgroundColor="@color/dodgerBlue">
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/childFrame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <android.support.v7.widget.CardView
+                    android:layout_width="350dp"
+                    android:layout_height="300dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/card_cornerRadius"
+                    app:contentPadding="@dimen/contentPadding">
 
-        </android.support.v7.widget.CardView>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/welcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/welcome_text"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="10pt"
+                            android:textStyle="normal"
+                            />
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/welcome"
+                            android:text="@string/text_Usrname"
+                            android:textColor="@color/deepSkyeBlue"
+                            android:textSize="15pt"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:id="@+id/smalltalk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name"
+                            android:layout_marginTop="20dp"
+                            android:text="@string/desc_text"
+                            android:textColor="@color/darkGrey"
+                            android:textSize="8pt"
+                            android:textStyle="normal"/>
+
+                        <LinearLayout
+                            android:id="@+id/fragments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/smalltalk"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="20dp">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_ExtraLives"
+                                android:textAlignment="center"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="8pt"
+                                android:textStyle="normal"
+                                />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/txt_HighestScore"
+                                android:textAlignment="center"
+                                android:textColor="@color/darkGrey"
+                                android:textSize="8pt"
+                                android:textStyle="normal"
+                                />
+
+                        </LinearLayout>
+
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_GetMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/getmorelives_btn"
+                    android:onClick="moreLives"
+                    android:text="@string/more_lives"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    />
+
+
+
+             <!--    -->
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
     </ScrollView>
 
 
 
 
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

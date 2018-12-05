@@ -1,9 +1,21 @@
 <resources>
     <string name="app_name">TQ</string>
-    <string name="welcome_text">Welcome Back</string>
     <string name="button_textInvite">Invite Friends</string>
     <string name="Name_text">Desmond N.</string>
     <string name="text_transition">It\'s much easier to win with friends</string>
     <string name="cont_Desc">Help Button</string>
     <string name="logo_desc">The TQ logo</string>
+    <string name="more_lives">Get More Extra Lives</string>
+    <string name="transition_text">Its much easier to win with friends</string>
+    <string name="desc_text">Our biggest week ever. N50k everyday.\n
+        Many winners, #WinningWeek is on.\n
+        Come play for free!
+
+    </string>
+    <string name="text_ExtraLives">Extra Lives \n
+        1
+    </string>
+    <string name="txt_HighestScore">Highest Score \n 11</string>
+    <string name="welcome_text">Welcome Back</string>
+    <string name="text_Usrname">Otunba E.</string>
 </resources>

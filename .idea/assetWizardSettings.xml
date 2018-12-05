@@ -68,9 +68,9 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="outputName" value="ic_action_help2" />
+                                      <entry key="outputName" value="ic_action_help" />
                                       <entry key="theme" value="CUSTOM" />
-                                      <entry key="themeColor" value="1487e5" />
+                                      <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
                                 </PersistentState>
