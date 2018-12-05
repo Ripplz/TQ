@@ -1,87 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/deepSkyeBlue"
-    android:orientation="vertical"
-    android:paddingLeft="@dimen/android_LayoutPadding"
-    android:paddingRight="@dimen/android_LayoutPadding"
     android:paddingBottom="@dimen/android_LayoutPadding"
-    tools:context=".MainActivity"
-    android:fitsSystemWindows="true">
+    tools:context=".MainActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/logo"
-            android:scaleType="centerCrop"
-            android:layout_marginEnd="165dp"
-            android:layout_marginRight="@dimen/margin_toTheRight"
-            android:contentDescription="@string/logo_desc"/>
-
-        <Button
-            android:id="@+id/btn_invite"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/layout_height"
-            android:text="@string/button_textInvite"
-            android:background="@drawable/btn_rounded"
-            android:layout_marginEnd="@dimen/rightOrend"
-            android:layout_marginRight="@dimen/rightOrend"
-            android:textAllCaps="false"
-            android:onClick="Invite"
-            android:textColor="@color/blue"
-            />
-
-        <ImageView
-            android:id="@+id/help_btn"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:clickable="true"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/cont_Desc"
-            android:focusable="true"
-            android:src="@drawable/ic_action_help"
-            android:onClick="Help"/>
-    </android.support.design.widget.AppBarLayout>
-
-    <TextView
-        android:id="@+id/Toptext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="@string/transition_text"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="@dimen/txt_size"
-        android:textStyle="normal"/>
-
-
-
-    <ScrollView
-        android:id="@+id/centerScroll"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/ChildLinear"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
             <RelativeLayout
-                android:id="@+id/childFrame"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/logo_desc"
+                    android:src="@drawable/tqlog" />
+
+                <Button
+                    android:id="@+id/btn_invite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_toStartOf="@id/help_btn"
+                    android:layout_toLeftOf="@id/help_btn"
+                    android:background="@drawable/btn_rounded"
+                    android:onClick="Invite"
+                    android:text="@string/button_textInvite"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue" />
+
+                <ImageView
+                    android:id="@+id/help_btn"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:contentDescription="@string/cont_Desc"
+                    android:focusable="true"
+                    android:onClick="Help"
+                    android:src="@drawable/ic_action_help" />
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:id="@+id/Toptext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/transition_text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_size"
+            android:textStyle="normal" />
+
+
+        <ScrollView
+            android:id="@+id/centerScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ChildLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
                 <android.support.v7.widget.CardView
                     android:layout_width="350dp"
-                    android:layout_height="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     app:cardBackgroundColor="@color/white"
                     app:cardCornerRadius="@dimen/card_cornerRadius"
                     app:contentPadding="@dimen/contentPadding">
@@ -97,8 +102,7 @@
                             android:text="@string/welcome_text"
                             android:textColor="@color/darkGrey"
                             android:textSize="10pt"
-                            android:textStyle="normal"
-                            />
+                            android:textStyle="normal" />
 
                         <TextView
                             android:id="@+id/name"
@@ -108,8 +112,7 @@
                             android:text="@string/text_Usrname"
                             android:textColor="@color/deepSkyeBlue"
                             android:textSize="15pt"
-                            android:textStyle="bold"
-                            />
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/smalltalk"
@@ -120,7 +123,7 @@
                             android:text="@string/desc_text"
                             android:textColor="@color/darkGrey"
                             android:textSize="8pt"
-                            android:textStyle="normal"/>
+                            android:textStyle="normal" />
 
                         <LinearLayout
                             android:id="@+id/fragments"
@@ -138,8 +141,7 @@
                                 android:textAlignment="center"
                                 android:textColor="@color/darkGrey"
                                 android:textSize="8pt"
-                                android:textStyle="normal"
-                                />
+                                android:textStyle="normal" />
 
                             <TextView
                                 android:layout_width="150dp"
@@ -148,19 +150,12 @@
                                 android:textAlignment="center"
                                 android:textColor="@color/darkGrey"
                                 android:textSize="8pt"
-                                android:textStyle="normal"
-                                />
+                                android:textStyle="normal" />
 
                         </LinearLayout>
 
 
-
-
-
-
                     </RelativeLayout>
-
-
 
 
                 </android.support.v7.widget.CardView>
@@ -169,29 +164,19 @@
                     android:id="@+id/btn_GetMore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
                     android:background="@drawable/getmorelives_btn"
                     android:onClick="moreLives"
+                    android:padding="16dp"
                     android:text="@string/more_lives"
                     android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    />
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
 
 
+        </ScrollView>
 
-             <!--    -->
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-
-
-    </ScrollView>
-
-
-
-
-</LinearLayout>
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
